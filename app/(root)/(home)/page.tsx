@@ -3,10 +3,10 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import { Separator } from '@/components/ui/separator'
 import { Skeleton } from '@/components/ui/skeleton'
 import { fetchPollutionData } from '@/services/pollution.service'
 import { PollutionData } from '@/types'
-import { Separator } from '@radix-ui/react-separator'
 import { useState } from 'react'
 
 export default function HomePage() {
@@ -23,6 +23,7 @@ export default function HomePage() {
 
 	return (
 		<div className='min-h-screen p-4 flex flex-col items-center mt-28'>
+			{/* <div className=''></div> */}
 			<h1 className='text-3xl font-bold mb-4 text-center'>
 				City Pollution Checker
 			</h1>
@@ -48,7 +49,7 @@ export default function HomePage() {
 					<CardContent className='p-6 space-y-2'>
 						<h2 className='text-xl font-semibold'>
 							<strong>Place: </strong>
-							{info.city.name}
+							{info.city.name.split(' ')[0]}
 						</h2>
 						<Separator />
 						<p>
@@ -57,6 +58,13 @@ export default function HomePage() {
 						<p>
 							<strong>Main Pollutant:</strong> {info.dominentpol}
 						</p>
+						{/* <p
+							className={`text-sm font-semibold text-${getAirQualityStatus(
+								info.aqi
+							)}`}
+						>
+							fdsa
+						</p> */}
 					</CardContent>
 				</Card>
 			)}

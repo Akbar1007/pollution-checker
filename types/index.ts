@@ -7,3 +7,8 @@ export interface PollutionData {
 	city: { name: string }
 	dominentpol: string
 }
+
+export interface IStatus {
+	color: string
+	label: string
+}

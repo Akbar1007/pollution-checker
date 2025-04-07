@@ -4,7 +4,17 @@ export const navLinks = [
 		route: '/',
 	},
 	{
-		name: 'Contact',
-		route: '/contact',
+		name: 'Pollutants',
+		route: '/pollutants',
+	},
+	{
+		name: 'Send Feedback',
+		route: '/send-feedback',
+	},
+]
+
+export const aqi_info = [
+	{
+		status: 'good',
 	},
 ]
