@@ -7,16 +7,14 @@ import { Separator } from '@/components/ui/separator'
 import { Skeleton } from '@/components/ui/skeleton'
 import { aqi_info } from '@/constants'
 import { fetchPollutionData } from '@/services/pollution.service'
-import { PollutionData, PollutionError } from '@/types'
+import { PollutionData } from '@/types'
 import { MapPin } from 'lucide-react'
 import { useState } from 'react'
 
 export default function HomePage() {
 	const [city, setCity] = useState('')
 	const [loading, setLoading] = useState(false)
-	const [info, setInfo] = useState<
-		PollutionData | { status: 'error'; message: string } | null
-	>(null)
+	const [info, setInfo] = useState<PollutionData | null>(null)
 	const [error, setError] = useState<string | null>(null)
 	const h6 = 'text-2xl semi-bold'
 
@@ -26,13 +24,13 @@ export default function HomePage() {
 		setError(null)
 
 		try {
-			const data = await fetchPollutionData(city)
-			console.log(data)
+			const response = await fetchPollutionData(city)
+			console.log(response)
 
-			if (data.status === 'error') {
-				setError((data as PollutionError).message)
+			if ('status' in response && response.status === 'error') {
+				setError(response.message)
 			} else {
-				setInfo(data as PollutionData)
+				setInfo(response as PollutionData)
 			}
 		} catch (error) {
 			console.error('Fetch failed:', error)

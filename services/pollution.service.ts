@@ -1,8 +1,4 @@
-// import { PollutionData } from '@/types'
-
 import { PollutionData } from '@/types'
-
-// const token = process.env.NEXT_PUBLIC_API_TOKEN
 
 // export async function fetchPollutionData(
 // 	city: string
