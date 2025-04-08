@@ -17,7 +17,7 @@ export interface IAqiInfo {
 	max: number
 	status: string
 	color: string
-	icon: string
+	icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 	descr: string
 	caution: string
 }

@@ -1,3 +1,12 @@
+import {
+	BadgeAlert,
+	CircleAlert,
+	OctagonAlert,
+	ShieldCheck,
+	Skull,
+	TriangleAlert,
+} from 'lucide-react'
+
 export const navLinks = [
 	{
 		name: 'Home',
@@ -19,7 +28,7 @@ export const aqi_info = [
 		max: 50,
 		status: 'Good',
 		color: '#009966',
-		icon: '✅',
+		icon: ShieldCheck,
 		descr:
 			'Air quality is considered satisfactory, and air pollution poses little or no risk.',
 		caution: 'Safe.',
@@ -29,7 +38,7 @@ export const aqi_info = [
 		max: 100,
 		status: 'Moderate',
 		color: '#FFDE33',
-		icon: '⚠️',
+		icon: CircleAlert,
 		descr:
 			'Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.',
 		caution:
@@ -39,7 +48,7 @@ export const aqi_info = [
 		min: 101,
 		max: 150,
 		status: 'Unhealthy for Sensitive Groups',
-		color: '#FF9933',
+		color: TriangleAlert,
 		icon: '❗',
 		descr:
 			'Members of sensitive groups may experience health effects. The general public is not likely to be affected.',
@@ -51,7 +60,7 @@ export const aqi_info = [
 		max: 200,
 		status: 'Unhealthy',
 		color: '#CC0033',
-		icon: '❗❗',
+		icon: BadgeAlert,
 		descr:
 			'Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.',
 		caution:
@@ -62,7 +71,7 @@ export const aqi_info = [
 		max: 300,
 		status: 'Very Unhealthy',
 		color: '#660099',
-		icon: '❗❗❗',
+		icon: OctagonAlert,
 		descr:
 			'Health warnings of emergency conditions. The entire population is more likely to be affected.',
 		caution:
@@ -73,7 +82,7 @@ export const aqi_info = [
 		max: Infinity,
 		status: 'Hazardous',
 		color: '#7E0023',
-		icon: '❗❗❗❗',
+		icon: Skull,
 		descr: 'Health alert: everyone may experience more serious health effects.',
 		caution: 'Everyone should avoid all outdoor exertion.',
 	},
