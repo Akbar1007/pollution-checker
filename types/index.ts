@@ -6,7 +6,7 @@ export interface PollutionData {
 	aqi: number
 	city: { name: string }
 	dominentpol: string
-	status: string
+	status: 'ok'
 }
 
 export interface IStatus {
@@ -22,3 +22,10 @@ export interface IAqiInfo {
 	descr: string
 	caution: string
 }
+
+export interface PollutionError {
+	status: 'error'
+	message: string
+}
+
+export type PollutionResponse = PollutionData | PollutionError
