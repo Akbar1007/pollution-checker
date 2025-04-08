@@ -6,6 +6,7 @@ export interface PollutionData {
 	aqi: number
 	city: { name: string }
 	dominentpol: string
+	status: string
 }
 
 export interface IStatus {

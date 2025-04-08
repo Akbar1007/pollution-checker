@@ -31,13 +31,14 @@ export const aqi_info = [
 		icon: ShieldCheck,
 		descr:
 			'Air quality is considered satisfactory, and air pollution poses little or no risk.',
-		caution: 'Safe.',
+		caution:
+			'The air quality is absolutely safe and poses no health risks for any age group. Enjoy outdoor activities freely.',
 	},
 	{
 		min: 51,
 		max: 100,
 		status: 'Moderate',
-		color: '#FFDE33',
+		color: '#E6C52E',
 		icon: CircleAlert,
 		descr:
 			'Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.',
@@ -48,8 +49,8 @@ export const aqi_info = [
 		min: 101,
 		max: 150,
 		status: 'Unhealthy for Sensitive Groups',
-		color: TriangleAlert,
-		icon: '❗',
+		color: '#FF9933',
+		icon: TriangleAlert,
 		descr:
 			'Members of sensitive groups may experience health effects. The general public is not likely to be affected.',
 		caution:
