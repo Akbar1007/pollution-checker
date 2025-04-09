@@ -15,7 +15,7 @@ function Navbar() {
 			<div className='container max-w-6xl mx-auto h-[10vh] w-full flex items-center justify-between'>
 				<Link href={'/'}>
 					<h1 className='text-4xl'>
-						<b>Pollution Checker</b>
+						<b className='pl-5'>Pollution Checker</b>
 					</h1>
 				</Link>
 				<div className='gap-2 hidden md:flex'>
