@@ -52,7 +52,7 @@ export default function HomePage() {
 			<h1 className='text-3xl font-bold mb-4 text-center'>
 				City Pollution Checker
 			</h1>
-			<div className='flex gap-2 mb-6 w-full max-w-md'>
+			<form className='flex gap-2 mb-6 w-full max-w-md'>
 				<Input
 					placeholder='Enter a city name'
 					value={city}
@@ -61,7 +61,7 @@ export default function HomePage() {
 				<Button onClick={handleCheck} disabled={!city || loading}>
 					{loading ? 'Loading...' : 'Check'}
 				</Button>
-			</div>
+			</form>
 			{loading && (
 				<div className='w-full max-w-md'>
 					<Skeleton className='h-40 rounded-xl w-full' />

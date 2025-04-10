@@ -10,12 +10,27 @@ import Mobile from './sheet-mobile'
 function Navbar() {
 	const pathName = usePathname()
 
+	const getPageName = (path: string) => {
+		switch (path) {
+			case '/':
+				return 'Pollution Checker'
+			case '/pollutants':
+				return 'About Pollutants'
+			case '/send-feedback':
+				return 'Contact Us'
+			// for dynamic routes (future)
+			default:
+				const matchingLink = navLinks.find(link => path.startsWith(link.route))
+				return matchingLink ? matchingLink.name : 'Read more'
+		}
+	}
+
 	return (
 		<div className='h-[10vh] backdrop-blur-sd border-b fixed z-40 inset-0 bg-background'>
 			<div className='container max-w-6xl mx-auto h-[10vh] w-full flex items-center justify-between'>
 				<Link href={'/'}>
 					<h1 className='text-4xl'>
-						<b className='pl-5'>Pollution Checker</b>
+						<b className='pl-5'>{getPageName(pathName)}</b>
 					</h1>
 				</Link>
 				<div className='gap-2 hidden md:flex'>
