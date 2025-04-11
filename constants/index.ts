@@ -89,4 +89,10 @@ export const aqi_info = [
 	},
 ]
 
-export const pollutants = []
+export const pollutants = [
+	{
+		header: 'PM 2.5 - Particulate Matter ',
+		content:
+			'Tiny particles that can penetrate deep into the lungs, causing various health issues.',
+	},
+]

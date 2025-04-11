@@ -49,7 +49,6 @@ export default function HomePage() {
 
 	return (
 		<div className='min-h-screen p-4 flex flex-col items-center mt-28'>
-			{/* <div className=''></div> */}
 			<h1 className='text-3xl font-bold mb-4 text-center'>
 				Check City Pollution
 			</h1>
