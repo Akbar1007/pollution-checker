@@ -88,3 +88,5 @@ export const aqi_info = [
 		caution: 'Everyone should avoid all outdoor exertion.',
 	},
 ]
+
+export const pollutants = []

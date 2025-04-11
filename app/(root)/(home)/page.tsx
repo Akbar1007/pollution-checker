@@ -1,5 +1,6 @@
 'use client'
 
+import ErrorStation from '@/components/shared/error-station'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -50,7 +51,7 @@ export default function HomePage() {
 		<div className='min-h-screen p-4 flex flex-col items-center mt-28'>
 			{/* <div className=''></div> */}
 			<h1 className='text-3xl font-bold mb-4 text-center'>
-				City Pollution Checker
+				Check City Pollution
 			</h1>
 			<form className='flex gap-2 mb-6 w-full max-w-md'>
 				<Input
@@ -93,7 +94,7 @@ export default function HomePage() {
 								<strong>Description of the situation: </strong>
 								{getAirQualityStatus(info.aqi)?.descr}
 							</p>
-							<Separator className='light:color-black dark:bg-black' />
+							<Separator className='dark:bg-black' />
 							<p>
 								<strong>Caution: </strong>
 								{getAirQualityStatus(info.aqi)?.caution}
@@ -107,9 +108,7 @@ export default function HomePage() {
 				<div className='text-3xl'>Please enter a city name.</div>
 			) : null}
 
-			{error && (
-				<div className='text-red-500 text-center mt-4'>Error: {error}</div>
-			)}
+			{error && <ErrorStation msg={error} />}
 		</div>
 	)
 }
