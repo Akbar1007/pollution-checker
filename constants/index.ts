@@ -91,8 +91,63 @@ export const aqi_info = [
 
 export const pollutants = [
 	{
-		header: 'PM 2.5 - Particulate Matter ',
+		header: 'PM2.5 - Fine Particulate Matter',
 		content:
-			'Tiny particles that can penetrate deep into the lungs, causing various health issues.',
+			'Tiny particles less than 2.5 micrometers that can enter the bloodstream through the lungs, increasing the risk of heart and respiratory diseases.',
+		color: 'rose',
+	},
+	{
+		header: 'PM10 - Coarse Particulate Matter',
+		content:
+			'Particles between 2.5 and 10 micrometers that can irritate the eyes, nose, and throat and aggravate asthma and bronchitis.',
+		color: 'amber',
+	},
+	{
+		header: 'NO2 - Nitrogen Dioxide',
+		content:
+			'A reddish-brown gas emitted from vehicles and industrial processes that can damage lung tissue and reduce immunity to respiratory infections.',
+		color: 'red',
+	},
+	{
+		header: 'SO2 - Sulfur Dioxide',
+		content:
+			'A toxic gas produced by burning fossil fuels, especially coal; it can lead to respiratory problems and contribute to acid rain.',
+		color: 'yellow',
+	},
+	{
+		header: 'CO - Carbon Monoxide',
+		content:
+			'A colorless, odorless gas from incomplete combustion of carbon-based fuels; it reduces oxygen delivery in the body and can be fatal in high concentrations.',
+		color: 'slate',
+	},
+	{
+		header: 'O₃ - Ground-Level Ozone',
+		content:
+			'Formed by a reaction between sunlight and pollutants like NOx and VOCs; it can cause chest pain, coughing, and throat irritation.',
+		color: 'indigo',
+	},
+	{
+		header: 'Pb - Lead',
+		content:
+			'A heavy metal that can accumulate in the body and damage the nervous system, especially in children. Emitted from metal processing and old paints.',
+		color: 'zinc',
+	},
+	{
+		header: 'VOCs - Volatile Organic Compounds',
+		content:
+			'Organic chemicals that easily become vapors or gases. Found in paints, cleaners, and vehicle emissions, contributing to smog and ozone formation.',
+		color: 'orange',
+	},
+	{
+		header: 'NH₃ - Ammonia',
+		content:
+			'Released mainly by agricultural activities like livestock waste and fertilizers. It contributes to the formation of secondary particulate matter.',
+		color: 'lime',
+	},
+	{
+		header: 'Benzene',
+		content:
+			'A known carcinogen found in vehicle exhaust and cigarette smoke. Long-term exposure can affect bone marrow and the immune system.',
+		color: 'violet',
 	},
 ]
