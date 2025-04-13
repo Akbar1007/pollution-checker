@@ -10,6 +10,7 @@ import { aqi_info } from '@/constants'
 import { fetchPollutionData } from '@/services/pollution.service'
 import { PollutionData } from '@/types'
 import { MapPin } from 'lucide-react'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function HomePage() {
@@ -48,7 +49,17 @@ export default function HomePage() {
 	const Icon = status?.icon
 
 	return (
-		<div className='min-h-screen p-4 flex flex-col items-center mt-28'>
+		<div className='min-h-screen p-4 flex flex-col items-center mt-22'>
+			<div className='relative'>
+				<div className='absolute inset-0 dark:bg-black/35 z-20 pointer-events-none' />
+				<Image
+					src='/imgs/air-pollution.jpg'
+					alt='send-feedback'
+					width={400}
+					height={400}
+					className='flex justify-center w-110 h-90 object-cover rounded-lg shadow-md mb-4'
+				/>
+			</div>
 			<h1 className='text-3xl font-bold mb-4 text-center'>
 				Check City Pollution
 			</h1>
@@ -83,7 +94,9 @@ export default function HomePage() {
 							</p>
 							<Separator className='dark:bg-black' />
 							<p className={h6}>Air Quality Index (AQI): {info.aqi}</p>
-							<p className={h6}>Main Pollutant: {info.dominentpol}</p>
+							<p className={h6}>
+								Main Pollutant: {info.dominentpol.toUpperCase()}
+							</p>
 							<p className={h6}>
 								Status: {getAirQualityStatus(info.aqi)?.status}{' '}
 								{Icon && <Icon className='w-5 h-5 inline-block' />}

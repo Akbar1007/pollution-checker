@@ -38,7 +38,7 @@ export const aqi_info = [
 		min: 51,
 		max: 100,
 		status: 'Moderate',
-		color: '#E6C52E',
+		color: '#C4A825',
 		icon: CircleAlert,
 		descr:
 			'Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.',
