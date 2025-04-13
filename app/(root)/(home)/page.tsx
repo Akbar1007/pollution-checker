@@ -56,7 +56,10 @@ export default function HomePage() {
 				<Input
 					placeholder='Enter a city name'
 					value={city}
-					onChange={e => setCity(e.target.value)}
+					onChange={e => {
+						setCity(e.target.value)
+						if (error) setError(null)
+					}}
 				/>
 				<Button onClick={handleCheck} disabled={!city || loading}>
 					{loading ? 'Loading...' : 'Check'}
@@ -104,7 +107,9 @@ export default function HomePage() {
 			)}
 
 			{!loading && !info && city === '' ? (
-				<div className='text-3xl'>Please enter a city name.</div>
+				<div className='text-3xl'>
+					Enter a city name to check the pollution level.
+				</div>
 			) : null}
 
 			{error && <ErrorStation msg={error} />}
