@@ -19,7 +19,9 @@ const Mobile = () => {
 			</SheetTrigger>
 			<SheetContent side={'left'}>
 				<Link href={'/'}>
-					<h1 className='text-4xl'>Pollution Checker</h1>
+					<h1 className='justify-center flex pt-6 text-2xl'>
+						Pollution Checker
+					</h1>
 				</Link>
 				<Separator className='my-3' />
 				<div className='flex flex-col space-y-3'>
